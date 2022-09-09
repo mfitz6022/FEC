@@ -43,7 +43,8 @@ h6 {
 }
 
 .star-row{
-  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 
 
@@ -176,7 +177,9 @@ select#sort {
 }
 
 .ratings-star-meta {
- color: darkgray;
+  display: flex;
+  gap: 20px;
+  color: darkgray;
   font-size:40px;
 }
 

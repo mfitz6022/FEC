@@ -137,7 +137,7 @@ const Sidebar = ({
       <h2 id="sidebarProductName">
         {productName}
       </h2>
-      <div>
+      <div id="sidebarProductStars">
         <RatingsStars stars={5} />
         <div id='scrollToReviewsButton' onClick={scrollToReviews}> (42069)</div>
       </div>
