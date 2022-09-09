@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
-import OutfitList from './lists/OutfitList.jsx';
-import RelatedList from './lists/RelatedList.jsx';
+import OutfitList from './RelatedListsAndOutfits/OutfitList.jsx';
+import RelatedList from './RelatedListsAndOutfits/RelatedList.jsx';
 import ProductContext from './ProductContext.jsx';
 
 const RelatedAndOutfits = ({ related, handleProductChange, product, interactions }) => {
