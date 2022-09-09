@@ -5,7 +5,6 @@ import QuestionItem from './QuestionItem.jsx';
 import QuestionModal from '../Modal/QuestionModal.jsx';
 import './QA.css';
 
-
 function QuestionList({ product, interactions }) {
   console.log(product);
 
@@ -13,25 +12,10 @@ function QuestionList({ product, interactions }) {
   const [show, setShow] = useState(false);
   const [questionsList, setQuestions] = useState([]);
   const [seeMoreQuestions, setSeeMoreQuestions] = useState(false);
-  // console.log(product);
-  // console.log("product ID: ", product?.id);
 
   const filteredQs = [];
 
-  // const options = {
-  //   headers: {'Authorization': process.env.API_KEY},
-  //   params: {
-  //     // 'product_id': product?.id,
-  //     'product_id': 65656,
-  //     // 'count': 99,
-  //   }
-  // };
-
   useEffect(() => {
-    // let productID = product?.id;
-    // console.log(productID);
-    // axios.get(`https://app-hrsei-api.herokuapp.com/api/fec2/rfp/qa/questions`, options)
-
     async function fetchData() {
       const request = await axios({
         method: 'get',
@@ -39,20 +23,12 @@ function QuestionList({ product, interactions }) {
         headers: { Authorization: process.env.API_KEY },
         params: {
           product_id: product.id,
-          // product_id: product?.id,
           count: 50,
         },
       });
       console.log(request.data.results);
       setQuestions(request.data.results);
       return;
-      // .then((response) => {
-      //   //console.log(response.data.results)
-      //   setQuestions(response.data.results);
-      // })
-      // .catch((err) => {
-      //   console.log(err);
-      // });
     }
     if (product) {
       fetchData();
@@ -114,5 +90,3 @@ function QuestionList({ product, interactions }) {
 }
 
 export default QuestionList;
-
-// Needs to be refactored to only return first 4 Questions sorted by usefulness

@@ -4,7 +4,6 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 const ImageCarousel = ({
   images = [], index, prev, next, setExpandedView,
 }) => {
-  console.log('IMAGE CAROUSEL');
   const handleImageClick = () => {
     setExpandedView();
   };

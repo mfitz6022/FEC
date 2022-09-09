@@ -1,7 +1,6 @@
 import React from 'react';
 import './Modal.css';
 import axios from 'axios';
-import ImageFile from './ImageFile.jsx';
 
 class AnswerModal extends React.Component {
   constructor(props) {
@@ -147,14 +146,13 @@ class AnswerModal extends React.Component {
                   name="email"
                   type="email"
                   placeholder="Example: jack@email.com"
-                  //errorMessage="The email address provided is not in correct email format"
                   maxLength="60"
                   value={this.state.email}
                   onChange={this.handleEmail}
                   required="true"
                 />
                 <br/>
-                <span>Email Required</span>
+                <span>Valid Email Required</span>
                 <p className="subtext">For authentication reasons, you will not be emailed</p>
               </label>
               <br/>
@@ -166,7 +164,6 @@ class AnswerModal extends React.Component {
                   cols="30"
                   name="answer"
                   type="text"
-                  //errorMessage="Required field"
                   value={this.state.answer}
                   onChange={this.handleAnswer}
                   required="true"
@@ -176,7 +173,6 @@ class AnswerModal extends React.Component {
               </label>
               <br/>
               <br/>
-              {/* <ImageFile onChange={this.handleFile} /> */}
               <div id="hideUploadContainer">
                 <div id="hideUpload" className={this.state.showUpload ? "showU" : "hideU"}>
                   <label htmlFor="fileInput" className="button">

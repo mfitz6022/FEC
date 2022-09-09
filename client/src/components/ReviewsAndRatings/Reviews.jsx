@@ -58,9 +58,15 @@ console.log('meta is', meta)}, [product])
     // <div>
     //   <h1>Ratings and Reviews</h1>
     <div onClick={(e) => interactions(e, 'RatingsAndReviews')}>
-      <div className="reviews-container">
-        <Ratings reviewMeta={meta}/>
-        <ReviewList reviewData={reviews} />
+      <div id="reviewsWrapper">
+        <div />
+        <div className="reviews-container">
+          <Ratings reviewMeta={meta}/>
+          <div>
+            <ReviewList reviewData={reviews} />
+          </div>
+        </div>
+        <div />
       </div>
     </div>
   )

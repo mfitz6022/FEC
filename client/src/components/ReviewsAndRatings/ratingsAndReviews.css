@@ -17,7 +17,7 @@ h6 {
 .review-item{
   border-bottom: 2px solid grey;
   padding-bottom: 10px;
-  width: 75%;
+  width: 100%;
   overflow-wrap: break-word;
 }
 
@@ -61,6 +61,11 @@ select#sort {
   background-color: rgba(0, 0, 0, 0.9);
   transition: 0.2s;
   margin: 20px;
+}
+
+#reviewsWrapper {
+  display: grid;
+  grid-template-columns: 10% auto 10%;
 }
 
 /* ratings sidebar */

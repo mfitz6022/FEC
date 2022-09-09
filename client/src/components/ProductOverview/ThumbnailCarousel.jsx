@@ -5,15 +5,15 @@ const ThumbnailCarousel = ({
 }) => {
   const [thumbnailIndex, setThumbnailIndex] = useState(0);
 
-  let shownThumbs = [];
+  let shownThumbnails = [];
   if (thumbnails.length > 7) {
     if (thumbnailIndex + 7 >= thumbnails.length) {
-      shownThumbs = thumbnails.slice(-7);
+      shownThumbnails = thumbnails.slice(-7);
     } else {
-      shownThumbs = thumbnails.slice(thumbnailIndex, thumbnailIndex + 7);
+      shownThumbnails = thumbnails.slice(thumbnailIndex, thumbnailIndex + 7);
     }
   } else {
-    shownThumbs = thumbnails;
+    shownThumbnails = thumbnails;
   }
 
   const prevHidden = thumbnailIndex <= 0;
@@ -50,7 +50,7 @@ const ThumbnailCarousel = ({
           &#8963;
         </div>
         <div id="thumbnailContainer">
-          {shownThumbs.map((thumbnail, idx) => (
+          {shownThumbnails.map((thumbnail, idx) => (
             <div id="thumbnailImageWrapper">
               <img
                 className="thumbnailImage"

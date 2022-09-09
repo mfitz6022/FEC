@@ -5,15 +5,9 @@ import ProductFeatures from './ProductFeatures.jsx';
 import ExpandedView from './ExpandedView.jsx';
 
 function ProductDetailPage({ product, allStyles, allPhotos, interactions }) {
-  console.log('PDP RENDER');
-
   const [viewState, setViewState] = useState({});
 
-  console.log('SELECTED STLYe');
-  console.log(viewState);
   useEffect(() => {
-    console.log('pdp use effect');
-
     setViewState({
       style: allStyles[0],
       photoSet: allPhotos[allStyles[0]?.style_id],
@@ -24,7 +18,6 @@ function ProductDetailPage({ product, allStyles, allPhotos, interactions }) {
   }, [allStyles]);
 
   const updateStyleImage = (id) => {
-    console.log('UPDATE IMAGES TRIGGER');
     setViewState((prev) => ({
       ...prev,
       style: allStyles[id],
@@ -34,7 +27,6 @@ function ProductDetailPage({ product, allStyles, allPhotos, interactions }) {
   };
 
   const syncFromExpandedView = (options) => {
-    console.log(viewState);
     setViewState((prev) => ({
       ...prev,
       imageIndex: options.imageIndex,

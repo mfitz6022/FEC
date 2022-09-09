@@ -92,7 +92,7 @@ html {
   background-color: white;
   position: sticky;
   position: -webkit-sticky;
-  top: 0;
+  top: 95px;
   padding-left: 15px;
   padding-right: 10px;
   padding-bottom: 10px;

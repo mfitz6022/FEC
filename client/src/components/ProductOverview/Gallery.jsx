@@ -5,10 +5,7 @@ import ThumbnailCarousel from './ThumbnailCarousel.jsx';
 const Gallery = ({
   product, photos = [], syncFromDefaultView, index
 }) => {
-  console.log('GALLERY RENDER');
-  console.log('imageIndex passed from pdp: ' + index);
   const [imageIndex, setImageIndex] = useState(index || 0);
-  console.log(imageIndex);
   const thumbnails = [];
   const images = [];
 
@@ -48,8 +45,6 @@ const Gallery = ({
   };
 
   const handleOpenExpandedView = () => {
-    console.log("OPEN EXPAND");
-    console.log(imageIndex);
     syncFromDefaultView(imageIndex);
   };
 

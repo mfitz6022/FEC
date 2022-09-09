@@ -3,15 +3,15 @@ import React, { useState } from 'react';
 const ExpandedThumbnails = ({ thumbnails = [], index, handleThumbnailClick }) => {
   const [thumbnailIndex, setThumbnailIndex] = useState(0);
 
-  let shownThumbs = [];
+  let shownThumbnails = [];
   if (thumbnails.length > 7) {
     if (thumbnailIndex + 7 >= thumbnails.length) {
-      shownThumbs = thumbnails.slice(-7);
+      shownThumbnails = thumbnails.slice(-7);
     } else {
-      shownThumbs = thumbnails.slice(thumbnailIndex, thumbnailIndex + 7);
+      shownThumbnails = thumbnails.slice(thumbnailIndex, thumbnailIndex + 7);
     }
   } else {
-    shownThumbs = thumbnails;
+    shownThumbnails = thumbnails;
   }
 
   const handleThumbnailClickEvents = (e) => {
@@ -46,7 +46,7 @@ const ExpandedThumbnails = ({ thumbnails = [], index, handleThumbnailClick }) =>
       <div id="expandedThumbnailPrev" onClick={handleThumbnailPrev} hidden={prevHidden}>
         &lt;
       </div>
-      {shownThumbs.map((thumbnail, idx) => {
+      {shownThumbnails.map((thumbnail, idx) => {
         const selected = (index - thumbnailIndex) === idx;
         return (
           <div

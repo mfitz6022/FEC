@@ -30,8 +30,6 @@ function AnswerItem({ answer, incrementCount }) {
     setReport(!report);
   }
 
-  // answer.photos is an array of photo objects
-    // need answer.photos[i].url to render
   const allPhotos = answer.photos.map((photo, index) => {
     return (<PhotoItem key={index} photo={photo} />);
   });
@@ -39,10 +37,10 @@ function AnswerItem({ answer, incrementCount }) {
   return (
     <div className="AnswerItem">
       <h4>A: {answer.body} </h4>
-        <div className="ansPhotos">
-          {allPhotos}
-        </div>
-        <div className="answerInfo">
+      <div className="ansPhotos">
+        {allPhotos}
+      </div>
+      <div className="answerInfo">
         <div className="postInfo">
           <p>By: {answer.answerer_name} on {answer.date}</p>
         </div>

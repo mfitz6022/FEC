@@ -7,8 +7,6 @@ import '../../../dist/productOverview.css';
 const StyleIcons = ({
   allStyles, setSelectedStyle, style, index,
 }) => {
-  console.log('STYLE ICONS RENDER');
-
   const [ticked, setTicked] = useState({});
 
   const setFallbackToDefaultStyle = () => {

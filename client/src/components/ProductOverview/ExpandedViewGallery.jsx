@@ -2,11 +2,9 @@ import React from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import ZoomableImage from './ZoomableImage.jsx';
 
-console.log('RENDER EXPANDED GALLERY');
 const ExpandedViewGallery = ({
   images, index, prev, next, closeExpandedView, styleIndex
 }) => {
-  console.log("EXPANDED IMAGE INDEX: " + index);
   const handleCloseExpandedView = () => {
     closeExpandedView();
   };

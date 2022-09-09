@@ -13,7 +13,6 @@ const header = { Authorization: process.env.API_KEY };
 const Sidebar = ({
   productName, productCategory, allStyles, style, updateStyleImage, styleIndex
 }) => {
-  console.log('SIDE BAR RENDER');
   const [selectedStyle, setSelectedStyle] = useState({});
   const [sizeOptions, setSizeOptions] = useState({});
   const [quantityOptions, setQuantityOptions] = useState({});

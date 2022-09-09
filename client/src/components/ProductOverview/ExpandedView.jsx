@@ -5,9 +5,6 @@ import ExpandedThumbnails from './ExpandedThumbnails.jsx';
 const ExpandedView = ({ photos, style, syncFromExpandedView, index, styleIndex }) => {
   const [imageIndex, setImageIndex] = useState(index || 0);
 
-  console.log("EXPANDED VIEW RENDER");
-  console.log(imageIndex);
-
   useEffect(() => {
     setImageIndex(index);
   }, [index]);
@@ -25,9 +22,6 @@ const ExpandedView = ({ photos, style, syncFromExpandedView, index, styleIndex }
   };
 
   const handleCloseExpandedView = () => {
-    console.log("CLSOING EXPANDED");
-    console.log('styleIndex :' + styleIndex);
-    console.log('index: ' + imageIndex);
     syncFromExpandedView({
       active: false, imageIndex, style, photos, styleIndex,
     });

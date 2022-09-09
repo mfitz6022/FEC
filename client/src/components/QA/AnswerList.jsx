@@ -6,8 +6,6 @@ import './QA.css';
 
 function AnswerList({ question, questionid, product }) {
 
-  // console.log("question id: ", questionid);
-
   const [show, setShow] = useState(false);
   const [answersList, setAnswers] = useState([]);
   const [showMoreAnswers, setShowMoreAnswers] = useState(false);
@@ -19,7 +17,7 @@ function AnswerList({ question, questionid, product }) {
   useEffect(() => {
     axios.get(`https://app-hrsei-api.herokuapp.com/api/fec2/rfp/qa/questions/${questionid}/answers`, options)
       .then((response) => {
-        console.log(response.data.results)
+        console.log(response.data.results);
         setAnswers(response.data.results);
       })
       .catch((err) => {
@@ -43,7 +41,6 @@ function AnswerList({ question, questionid, product }) {
     currentAnswer.helpfulness += 1;
 
     setAnswers(newAnswersList);
-    console.log("incrementCount");
 
     axios({
       method: 'put',
@@ -62,7 +59,6 @@ function AnswerList({ question, questionid, product }) {
     <div className="AnswerList">
       <div className="initialA">
         {answers.slice(0,2)}
-      {/* {showMoreAnswers ? answers : answers.slice(0,2)} */}
       </div>
       <div id="hideContainer">
         <div id="hideContent" className={showMoreAnswers ? "showA" : "hideA"}>
