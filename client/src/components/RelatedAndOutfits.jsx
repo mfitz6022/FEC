@@ -8,7 +8,9 @@ const RelatedAndOutfits = ({ related, handleProductChange, product, interactions
 
   return (
     <div onClick={(e) => interactions(e,'RelatedAndOutfits')}>
-      <ProductContext.Provider className="list-container" value={{ handleProductChange, currentProduct }}>
+      <ProductContext.Provider
+        className="list-container"
+        value={{ handleProductChange, currentProduct }}>
         <RelatedList
           related={related}
           currentProduct={product?.id ? product.id : null}
