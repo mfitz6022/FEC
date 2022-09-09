@@ -58,7 +58,6 @@ const OutfitList = (props) => {
       outfitList.push(key)
     }
 
-    console.log(outfitList);
     setCurrentOutfits(outfitList);
   }
 

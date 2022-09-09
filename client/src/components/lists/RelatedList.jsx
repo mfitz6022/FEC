@@ -17,19 +17,15 @@ const RelatedList = (props) => {
   useEffect(() => {
     getProduct(currentProduct?.id)
     .then((response) => {
-      console.log('features in the relatedList ==>', response.data.features);
       setFeatures(response.data.features.map(item => item.feature))
     })
     .then(() => {
       setLoading(false);
-      console.log('current featuers from inside the use effect ==>', currentFeatures)
     })
     .catch((e) => {
       console.error(e);
     })
   }, [currentProduct])
-
-  console.log('current features ==>', currentFeatures);
 
   const slideLeft = () => {
     const slider = document.getElementById('slider');

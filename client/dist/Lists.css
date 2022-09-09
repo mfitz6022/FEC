@@ -104,6 +104,8 @@
 .entry-add-button {
   height: 50px;
   width: 80;
+  padding-left: 15px;
+  padding-right: 15px;
   border: none;
   border-radius: 100px;
   color: #FFFFFF;
@@ -138,17 +140,19 @@
 */
 .slide-left {
   position: absolute;
+  font-size: x-large;
   /* margin-left: -47.5%; */
-  margin-left: -5%;
+  margin-left: -2.5%;
   padding: 0px;
   transition: 0.2s;
 }
 
 .slide-right {
   position: absolute;
+  font-size:x-large;
   padding: 0px;
   /* margin-left: 47.5%; */
-  margin-left: 90%;
+  margin-left: 89%;
   transition: 0.2s;
 }
 
@@ -268,6 +272,7 @@
   border-radius: 10px;
   background-color: white;
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+  z-index: 1000000;
 }
 
 .comparison-content {
@@ -298,6 +303,7 @@
   align-items: center;
   flex-direction: column;
   width: 33%;
+  margin-top: 10px;
 }
 
 .features {
@@ -306,6 +312,7 @@
   align-items: center;
   flex-direction: column;
   width: 33%;
+  margin-top: 10px;
 }
 
 .related-features {
@@ -314,6 +321,7 @@
   align-items: center;
   flex-direction: column;
   width: 33%;
+  margin-top: 10px;
 }
 
 /* ------------------------------------------*/
