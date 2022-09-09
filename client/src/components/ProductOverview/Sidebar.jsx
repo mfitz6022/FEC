@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Select from 'react-select';
 import StyleIcons from './StyleIcons.jsx';
 import ShareIcons from './ShareIcons.jsx';
+import RatingsStars from '../ReviewsAndRatings/RatingsStars.jsx';
 
 import '../../../dist/productOverview.css';
 
@@ -123,6 +124,11 @@ const Sidebar = ({
     }
   };
 
+  const scrollToReviews = () => {
+    const reviewsWrapper = document.getElementById('reviewsWrapper');
+    reviewsWrapper.scrollIntoView({behavior: 'smooth'});
+  };
+
   return (
     <div>
       <div id="sidebarProductCategory">
@@ -132,8 +138,8 @@ const Sidebar = ({
         {productName}
       </h2>
       <div>
-        ★★★★★
-        <a href="#reviews">(42069)</a>
+        <RatingsStars stars={5} />
+        <div id='scrollToReviewsButton' onClick={scrollToReviews}> (42069)</div>
       </div>
       <br />
       <div id="sidebarStyleName">

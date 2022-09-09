@@ -16,7 +16,7 @@ setMetaData(props.reviewMeta)
 
   return (
     <div className="ratings-container">
-     <h2>Ratings & Reviews</h2>
+     <h1>Ratings & Reviews</h1>
      <RatingsStarMeta reviewMeta={metaData}/>
      <RatingsProductMeta reviewMeta={metaData}/>
     </div>

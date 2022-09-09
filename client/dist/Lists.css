@@ -4,6 +4,7 @@
 
 .list-title {
   margin-left: 7vw;
+  font-family: 'Oswald', sans-serif;
 }
 
 .list-container {
@@ -222,6 +223,7 @@
   margin: 0.5%;
   margin-left: 2.5vw;
   font-size: small;
+  font-family: 'Oswald', sans-serif;
 }
 
 .name {
@@ -229,7 +231,7 @@
   justify-content: flex-start;
   margin: 0.5%;
   margin-left: 2.5vw;
-  font-size: small;
+  font-size: medium;
 }
 
 .price {

@@ -63,19 +63,21 @@ html {
   width:60px;
   height:60px;
   object-fit: cover;
-  transition: all .3s ease-in-out;
   cursor: pointer;
+  box-shadow: 1px 1px 1px 1px rgb(0 0 0 / 10%);
 }
 
-.styleIcon img:hover{
-  transform: scale(1.1);
-}
 
 .iconContainer {
   display: inline-block;
   position: relative;
   top: 0;
   right: 0;
+  transition: all .3s ease-in-out;
+}
+
+.iconContainer:hover {
+  transform: scale(1.1);
 }
 
 .checkOverlay {
@@ -86,6 +88,8 @@ html {
   height: 10px;
   z-index: 1;
 }
+
+
 
 #sidebar {
   padding-top: 20px;
@@ -106,22 +110,33 @@ html {
 }
 
 #sidebarPrice {
-  font-size: larger;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: xx-large;
+  font-family: 'Oswald', sans-serif;
 }
 
 #sidebarProductName {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
 }
 
 #sidebarProductCategory {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
 }
 
 #sidebarStyleName {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+#scrollToReviewsButton {
+  display: inline-block;
+}
+
+#scrollToReviewsButton:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 #productMain {
@@ -149,7 +164,7 @@ html {
 }
 
 #featureAccordian {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: larger;
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
@@ -171,6 +186,8 @@ html {
 #expandedImageWrapper {
   position: relative;
   text-align: center;
+  box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 10%);
+  border-radius: 15px;
 }
 
 #expandedImage {
@@ -237,6 +254,13 @@ html {
 #closeExpandedViewButton {
   z-index: 2342;
   cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  box-shadow: 1px 1px 1px 1px rgb(0 0 0 / 10%);
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, .1);
 }
 
 #expandedViewContainer {
@@ -365,6 +389,7 @@ html {
   margin: 5px;
   object-fit: cover;
   border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 10%);
 }
 
 #thumbnailImageWrapper {
@@ -406,7 +431,7 @@ html {
 
 #sloganText {
   text-align: left;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 900;
   font-size: x-large;
   padding-bottom: 15px;
@@ -424,7 +449,7 @@ html {
 }
 
 #descriptionAccordian {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: larger;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -432,7 +457,7 @@ html {
   cursor: pointer;
 }
 
-#featuresText {
+#featureText {
   font-size: medium;
 }
 

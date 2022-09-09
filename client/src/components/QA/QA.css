@@ -5,6 +5,7 @@ body {
 .QAhead {
   padding: 0px 40px;
   margin: 0px;
+  font-family: 'Oswald', sans-serif;
 }
 
 .clickable:hover {
