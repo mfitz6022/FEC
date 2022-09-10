@@ -275,8 +275,8 @@ html {
 #zoomImage {
   transition: opacity .8s;
   display: block;
-  min-height: 900px;
-  max-height: 900px;
+  min-height: 80vh;
+  max-height: 80vh;
 }
 
 #zoomImageWrapper.zoomed {

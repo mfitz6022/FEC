@@ -62,9 +62,9 @@ console.log('meta is', meta)}, [product])
         <div />
         <div className="reviews-container">
           <Ratings reviewMeta={meta}/>
-          <div>
+          {/* <div> */}
             <ReviewList reviewData={reviews} />
-          </div>
+          {/* </div> */}
         </div>
         <div />
       </div>

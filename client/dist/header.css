@@ -62,3 +62,8 @@ header {
   padding-right: 10px;
   font-size: 15px;
 }
+
+#headerIcon:hover {
+  color: gray;
+  cursor: pointer;
+}

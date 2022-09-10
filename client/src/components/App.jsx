@@ -77,12 +77,16 @@ function App() {
       });
   };
 
+  const scrollToTop = () => {
+    window.scrollTo(0,0);
+  };
+
   return (product) ? (
     <>
       <div id="headerWrapper">
         <div />
         <div id="headerContainer">
-          <header><FontAwesomeIcon icon={faReact} /> ATLR</header>
+          <header id="headerIcon" onClick={scrollToTop}><FontAwesomeIcon icon={faReact} /> ATLR</header>
           <div id="headerIcons">
             <div id="headerSearchBar">
               <div id="inputWrapper">

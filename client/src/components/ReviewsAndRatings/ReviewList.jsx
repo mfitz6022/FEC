@@ -10,7 +10,7 @@ const [renderedReviews, setRenderedReviews] = React.useState(1)
 
 const handleReviewCards = props.reviewData.map((reviewItem, i) => {
   if (i <= renderedReviews){
-    return <div>  <ReviewCard className='review-item' key={reviewItem.review_id}review={reviewItem} /> </div>
+    return <ReviewCard className='review-item' key={reviewItem.review_id}review={reviewItem} />
   }
   })
 
