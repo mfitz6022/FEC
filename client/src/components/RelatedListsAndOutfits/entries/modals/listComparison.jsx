@@ -1,8 +1,8 @@
 import React, {useState, useContext, useEffect } from 'react';
 import { FaCheck } from 'react-icons/fa';
-import ProductContext from '../../../ProductContext.jsx'
-import FeaturesContext from '../../../FeaturesContext.jsx'
-import { getProduct } from '../../../../getHelpers.js'
+import ProductContext from '../../../ProductContext.jsx';
+import FeaturesContext from '../../../FeaturesContext.jsx';
+import { getProduct } from '../../../../getHelpers.js';
 
 const ListComparison = (props) => {
   const { currentProduct } = useContext(ProductContext);

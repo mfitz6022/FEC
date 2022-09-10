@@ -10,6 +10,7 @@ const OutfitList = (props) => {
   const [count, setCount] = useState(1)
   const [countLeft, setCountLeft] = useState(0);
   const [countRight, setCountRight] = useState(3);
+  const [update, setUpdate] = useState(false);
 
   const slideLeft = () => {
     const slider = document.getElementById('slider-outfits');
@@ -26,6 +27,7 @@ const OutfitList = (props) => {
       const key = currentProduct.id;
       localStorage.setItem(key, true);
       setCurrentOutfits(currentOutfits => [...currentOutfits, currentProduct.id]);
+      setUpdate(!update);
     } else {
       alert('This product is already on your list');
     }
@@ -35,16 +37,16 @@ const OutfitList = (props) => {
     const outfitList = currentOutfits.filter(outfit => outfit !== target)
     setCurrentOutfits(outfitList);
     localStorage.removeItem(target);
-  }
+  };
 
   const handleCount = () => {
     setCount(count + 1);
-  }
+  };
 
   const handleCountLeft = () => {
     setCountLeft(countLeft - 1);
     setCountRight(countRight - 1);
-  }
+  };
 
   const handleCountRight = () => {
     setCountRight(countRight + 1);
@@ -57,14 +59,12 @@ const OutfitList = (props) => {
     for (let key in storage) {
       outfitList.push(key)
     }
-
     setCurrentOutfits(outfitList);
   }
 
-
   useEffect(() => {
     getStorage();
-  }, []);
+  }, [update]);
 
   return (
     <>
